@@ -13,6 +13,6 @@ app.use(logger('dev'));
 
 app.use('/api', router);
 
-app.get('/', (req, res) => res.json({ message: 'Server working' }));
+app.get('/', (req, res) => res.json({ msg: 'Server working' }));
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
