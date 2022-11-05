@@ -10,7 +10,7 @@
 
 ### **_Deployed Site_**
 
-<!-- [HSU](https://www.google.com) -->
+_[TBA](https://www.google.com)_
 
 ---
 
@@ -40,6 +40,8 @@ Authenticaed Admin users will be able to:
 ![Entity Relationship Diagram](./images/png/hoverstate_university_erd.png 'Entity Relationship Diagram')
 
 #### **_Component Hierarchy Diagram:_**
+
+_TBA_
 
 <!-- ![Component Hierarchy Diagram](./images/brtr-CHD.png 'Component Hierarchy Diagram') -->
 
