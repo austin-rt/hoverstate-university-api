@@ -23,6 +23,19 @@ const CreateStudent = async (req, res) => {
   }
 };
 
+const UpdateStudentById = async (req, res) => {
+  try {
+    const studentId = parseInt(req.params.id);
+    const updatedStudent = await Student.update(req.body, {
+      where: { id: studentId },
+      returning: true,
+    });
+    res.send(updatedStudent);
+  } catch (err) {
+    throw err;
+  }
+};
+
 const DeleteStudentById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -40,5 +53,6 @@ const DeleteStudentById = async (req, res) => {
 module.exports = {
   GetAllStudents,
   CreateStudent,
+  UpdateStudentById,
   DeleteStudentById,
 };
