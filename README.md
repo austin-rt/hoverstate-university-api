@@ -1,4 +1,4 @@
-# HoverState University
+# Hoverstate University
 
 ## Date: 11/11/2022
 
@@ -6,9 +6,11 @@
 
 [Website](https://wwww.austinrt.io) | [GitHub](https://github.com/austin-rt) | [LinkedIn](https://www.linkedin.com/in/austinrt/)
 
+![Hoverstate University](./images/png/hoverstate_university_readme_banner.png)
+
 ### **_Deployed Site_**
 
-[HSU]()
+<!-- [HSU](https://www.google.com) -->
 
 ---
 
@@ -39,7 +41,7 @@ Authenticaed Admin users will be able to:
 
 #### **_Component Hierarchy Diagram:_**
 
-![Component Hierarchy Diagram](./images/brtr-CHD.png 'Component Hierarchy Diagram')
+<!-- ![Component Hierarchy Diagram](./images/brtr-CHD.png 'Component Hierarchy Diagram') -->
 
 <!-- ### **_Screen Shots_**
 
