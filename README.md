@@ -37,7 +37,7 @@ Authenticaed Admin users will be able to:
 
 #### **_Entity Relationship Diagram:_**
 
-![Entity Relationship Diagram](./images/png/Hoverstate_University.png 'Entity Relationship Diagram')
+![Entity Relationship Diagram](./images/png/hoverstate_university_erd.png 'Entity Relationship Diagram')
 
 #### **_Component Hierarchy Diagram:_**
 
