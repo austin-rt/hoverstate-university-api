@@ -16,10 +16,18 @@ module.exports = (sequelize, DataTypes) => {
       student_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        references: {
+          model: 'students',
+          key: 'id',
+        },
       },
       course_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        references: {
+          model: 'courses',
+          key: 'id',
+        },
       },
     },
     {
