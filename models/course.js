@@ -25,7 +25,6 @@ module.exports = (sequelize, DataTypes) => {
       abbreviation: {
         type: DataTypes.STRING,
         allowNull: false,
-        defaultValue: 'CSCI 0000',
       },
     },
     {
