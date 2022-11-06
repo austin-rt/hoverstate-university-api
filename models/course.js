@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      abbreviation: {
+      course_code: {
         type: DataTypes.STRING,
         allowNull: false,
       },
