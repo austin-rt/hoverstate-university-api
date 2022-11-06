@@ -29,11 +29,15 @@ module.exports = (sequelize, DataTypes) => {
           key: 'id',
         },
       },
+      grade: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
     },
     {
       sequelize,
       modelName: 'StudentCourse',
-      tableName: 'student_course',
+      tableName: 'students_courses',
     }
   );
   return StudentCourse;

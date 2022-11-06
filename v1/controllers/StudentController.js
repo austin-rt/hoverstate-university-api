@@ -1,9 +1,35 @@
-const { Student } = require('../models');
+const { Student, Course } = require('../../models');
 
 const GetAllStudents = async (req, res) => {
   try {
-    const students = await Student.findAll();
+    const students = await Student.findAll({
+      include: [
+        {
+          model: Course,
+          as: 'courses',
+          through: { attributes: ['grade'] },
+        },
+      ],
+    });
     res.send(students);
+  } catch (err) {
+    throw err;
+  }
+};
+
+const GetStudentById = async (req, res) => {
+  try {
+    const studentId = parseInt(req.params.id);
+    const student = await Student.findByPk(studentId, {
+      include: [
+        {
+          model: Course,
+          as: 'courses',
+          through: { attributes: ['grade'] },
+        },
+      ],
+    });
+    res.send(student);
   } catch (err) {
     throw err;
   }
@@ -40,9 +66,7 @@ const DeleteStudentById = async (req, res) => {
   try {
     const { id } = req.params;
     await Student.destroy({
-      where: {
-        id,
-      },
+      where: { id },
     });
     res.send({ msg: `Student with id ${id} was deleted` });
   } catch (err) {
@@ -52,6 +76,7 @@ const DeleteStudentById = async (req, res) => {
 
 module.exports = {
   GetAllStudents,
+  GetStudentById,
   CreateStudent,
   UpdateStudentById,
   DeleteStudentById,
