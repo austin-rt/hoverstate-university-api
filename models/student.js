@@ -12,11 +12,11 @@ module.exports = (sequelize, DataTypes) => {
   }
   Student.init(
     {
-      firstName: {
+      first_name: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      lastName: {
+      last_name: {
         type: DataTypes.STRING,
         allowNull: false,
       },

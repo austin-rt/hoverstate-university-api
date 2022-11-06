@@ -1,8 +1,8 @@
 'use strict';
 const falso = require('@ngneat/falso');
 const students = [...Array(500)].map(() => ({
-  firstName: falso.randFirstName(),
-  lastName: falso.randLastName(),
+  first_name: falso.randFirstName(),
+  last_name: falso.randLastName(),
   email: falso.randEmail({ provider: 'hoverstate', suffix: 'edu' }),
   createdAt: new Date(),
   updatedAt: new Date(),
