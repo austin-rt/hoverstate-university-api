@@ -11,6 +11,6 @@ router.use('/courses', CourseRouter);
 router.use('/student-courses', StudentCourseRouter);
 router.use('/auth', AuthRouter);
 
-app.get('/', (req, res) => res.json({ msg: 'API root working' }));
+router.get('/', (req, res) => res.json({ msg: 'API root working' }));
 
 module.exports = router;
