@@ -22,6 +22,11 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      abbreviation: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        defaultValue: 'CSCI 0000',
+      },
     },
     {
       sequelize,
