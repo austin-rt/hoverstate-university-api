@@ -30,7 +30,7 @@ const EditStudentCourseGrade = async (req, res) => {
   try {
     const { studentId, courseId } = req.body;
     const updatedStudentCourse = await StudentCourse.update(req.body, {
-      where: { student_id: studentId, course_id: courseId },
+      where: { student_id: parseInt(studentId), course_id: parseInt(courseId) },
       returning: true,
     });
     res.send(updatedStudentCourse);
