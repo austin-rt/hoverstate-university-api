@@ -38,12 +38,15 @@ const GetStudentById = async (req, res) => {
 const CreateStudent = async (req, res) => {
 	try {
 		const { firstName: first_name, lastName: last_name, email } = req.body;
-		const user = await Student.create({
+		const student = await Student.create({
 			first_name,
 			last_name,
 			email
 		});
-		res.send(user);
+		return res.status(200).send({
+			msg: `Student was created`,
+			payload: student
+		});
 	} catch (err) {
 		throw err;
 	}
@@ -56,7 +59,10 @@ const UpdateStudentById = async (req, res) => {
 			where: { id: studentId },
 			returning: true
 		});
-		res.send(updatedStudent);
+		return res.status(200).send({
+			msg: `Student with id ${studentId} was updated`,
+			payload: updatedStudent
+		});
 	} catch (err) {
 		throw err;
 	}
@@ -65,10 +71,14 @@ const UpdateStudentById = async (req, res) => {
 const DeleteStudentById = async (req, res) => {
 	try {
 		const { id } = req.params;
+		const student = await Student.findByPk(id);
 		await Student.destroy({
 			where: { id }
 		});
-		res.send({ msg: `Student with id ${id} was deleted` });
+		return res.status(200).send({
+			msg: `Student with id ${student.id} was deleted`,
+			payload: student
+		});
 	} catch (err) {
 		throw err;
 	}
