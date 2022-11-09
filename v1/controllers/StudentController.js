@@ -37,10 +37,10 @@ const GetStudentById = async (req, res) => {
 
 const CreateStudent = async (req, res) => {
 	try {
-		const { firstName, lastName, email } = req.body;
+		const { firstName: first_name, lastName: last_name, email } = req.body;
 		const user = await Student.create({
-			firstName,
-			lastName,
+			first_name,
+			last_name,
 			email
 		});
 		res.send(user);
