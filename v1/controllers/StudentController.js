@@ -5,8 +5,9 @@ const GetAllStudents = async (req, res) => {
 		const students = await Student.findAll({
 			include: [
 				{
+					model: Course,
 					as: 'courses',
-					through: { model: Course, attributes: ['grade'] }
+					through: { attributes: ['grade'] }
 				}
 			]
 		});
@@ -22,8 +23,9 @@ const GetStudentById = async (req, res) => {
 		const student = await Student.findByPk(studentId, {
 			include: [
 				{
+					model: Course,
 					as: 'courses',
-					through: { model: Course, attributes: ['grade'] }
+					through: { attributes: ['grade'] }
 				}
 			]
 		});
