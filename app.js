@@ -9,14 +9,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const corsOptions = {
-	origin: [
-		'http://localhost:3000',
-		'https://hoverstate-university.netlify.app/'
-	],
-	optionsSuccessStatus: 200
-};
-
 app.use(express.urlencoded({ extended: true }));
 app.use(logger('dev'));
 
