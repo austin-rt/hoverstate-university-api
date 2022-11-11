@@ -40,9 +40,12 @@ const CreateCourse = async (req, res) => {
 		const { name, courseCode } = req.body;
 		const course = await Course.create({
 			name,
-			course_code: courseCode
+			course_code: courseCode.toUpperCase()
 		});
-		res.send(course);
+		return res.status(200).send({
+			msg: `Course was created`,
+			payload: course
+		});
 	} catch (err) {
 		throw err;
 	}
@@ -55,7 +58,10 @@ const UpdateCourseById = async (req, res) => {
 			where: { id: courseId },
 			returning: true
 		});
-		res.send(updatedCourse);
+		return res.status(200).send({
+			msg: `Course with id ${courseId} was updated`,
+			payload: updatedCourse
+		});
 	} catch (err) {
 		throw err;
 	}
@@ -64,10 +70,14 @@ const UpdateCourseById = async (req, res) => {
 const DeleteCourseById = async (req, res) => {
 	try {
 		const { id } = req.params;
+		const course = await Course.findByPk(id);
 		await Course.destroy({
 			where: { id }
 		});
-		res.send({ msg: `Course with id ${id} was deleted` });
+		return res.status(200).send({
+			msg: `Course with id ${course.id} was deleted`,
+			payload: course
+		});
 	} catch (err) {
 		throw err;
 	}
