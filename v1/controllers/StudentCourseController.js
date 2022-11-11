@@ -6,7 +6,7 @@ const AssignStudentToCourse = async (req, res) => {
 		const studentCourse = await StudentCourse.create({
 			student_id: parseInt(studentId),
 			course_id: parseInt(courseId),
-			grade
+			grade: parseInt(grade)
 		});
 		res.send(studentCourse);
 	} catch (err) {
