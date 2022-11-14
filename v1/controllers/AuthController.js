@@ -27,7 +27,7 @@ const Login = async (req, res) => {
 				username: user.username
 			};
 			let token = middleware.createToken(payload);
-			return res.send({ user: ...payload, token });
+			return res.send({ user: { ...payload, token } });
 		}
 		res.status(401).send({ status: 'Error', msg: 'Unauthorized' });
 	} catch (err) {
@@ -35,13 +35,7 @@ const Login = async (req, res) => {
 	}
 };
 
-const CheckSession = async (req, res) => {
-	const { payload } = res.locals;
-	res.send(payload);
-};
-
 module.exports = {
 	Register,
-	Login,
-	CheckSession
+	Login
 };
