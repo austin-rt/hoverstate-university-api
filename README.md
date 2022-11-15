@@ -24,12 +24,17 @@ Hoverstate University is a simple full-stack test project built using a PostgreS
 - Sequelize
 - React.js
 - Redux Toolkit
+- TailwindCSS
 - Node.js
 - Railway / Netlify
 
 #### **_Entity Relationship Diagram:_**
 
 ![Entity Relationship Diagram](./images/png/hoverstate_university_erd.png 'Entity Relationship Diagram')
+
+#### **_Component Hierarchy Diagram:_**
+
+![Component Hierarchy Diagram](./images/png/hoverstate-university-CHD.png 'Component Hierarchy Diagram')
 
 ### **_License_**
 
