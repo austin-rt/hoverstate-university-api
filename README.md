@@ -28,11 +28,11 @@ Available routes are as follows:
   - `/login`
   - `/register`
 - `/courses`
-- `/` - get all courses
-- `/:id` - get course by id
-- `/:id` - update course by id
-- `/:id` - delete course by id
-- `/create` - post new course
+  - `/` - get all courses
+  - `/:id` - get course by id
+  - `/:id` - update course by id
+  - `/:id` - delete course by id
+  - `/create` - post new course
 - `/students`
   - `/` get all students
   - `/:id` - get student by id
