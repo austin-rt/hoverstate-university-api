@@ -60,7 +60,7 @@ Available routes are as follows:
 
 #### **_Entity Relationship Diagram:_**
 
-![Entity Relationship Diagram](./images/png/hoverstate_university_erd.png 'Entity Relationship Diagram')
+![Entity Relationship Diagram](./images/drawio/hoverstate_university_erd.drawio.png 'Entity Relationship Diagram')
 
 #### **_Component Hierarchy Diagram:_**
 

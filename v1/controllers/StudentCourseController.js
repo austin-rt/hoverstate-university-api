@@ -1,5 +1,14 @@
 const { StudentCourse } = require('../../models');
 
+const GetAll = async (req, res) => {
+	try {
+		const all = await StudentCourse.findAll();
+		res.send(all);
+	} catch (err) {
+		throw err;
+	}
+};
+
 const AssignStudentToCourse = async (req, res) => {
 	try {
 		const { studentId, courseId, grade } = req.body;
@@ -40,6 +49,7 @@ const EditStudentCourseGrade = async (req, res) => {
 };
 
 module.exports = {
+	GetAll,
 	AssignStudentToCourse,
 	GetAllCoursesByStudentId,
 	EditStudentCourseGrade
